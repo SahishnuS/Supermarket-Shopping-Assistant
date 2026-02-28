@@ -1,24 +1,24 @@
-# Supermarket AI Shopping Assistant 🛒
+# Supermarket AI Shopping Assistant 
 
 A comprehensive, AI-powered smart shopping assistant designed to enhance the in-store supermarket experience. It features voice and text processing, intelligent product routing, and a store management dashboard.
 
-## 🚀 Features
+##  Features
 
-- **🗣️ Voice & Text Chat**: Interact with the assistant using voice (powered by OpenAI Whisper) or text to find products naturally.
-- **🤖 Local & Cloud AI**: Uses Ollama for local LLM processing (e.g., Phi-2, TinyLlama) or Groq for lightning-fast cloud inference.
-- **🗺️ Smart Store Routing**: Generates customized visual maps showing the optimal path from the entrance to your desired products.
-- **🔎 Fuzzy Search**: Quickly find products even with typos using RapidFuzz.
-- **📊 Admin Dashboard**: A dedicated interface to manage store configuration, products, and aisles.
-- **⚡ AMD Hardware Acceleration**: Supports ONNX Runtime with DirectML for accelerated inference on AMD GPUs (Olive optimization ready).
+- ** Voice & Text Chat**: Interact with the assistant using voice (powered by OpenAI Whisper) or text to find products naturally.
+- ** Local & Cloud AI**: Uses Ollama for local LLM processing (e.g., Phi-2, TinyLlama) or Groq for lightning-fast cloud inference.
+- ** Smart Store Routing**: Generates customized visual maps showing the optimal path from the entrance to your desired products.
+- ** Fuzzy Search**: Quickly find products even with typos using RapidFuzz.
+- ** Admin Dashboard**: A dedicated interface to manage store configuration, products, and aisles.
+- ** AMD Hardware Acceleration**: Supports ONNX Runtime with DirectML for accelerated inference on AMD GPUs (Olive optimization ready).
 
-## 🛠️ Architecture
+##  Architecture
 
 The project is split into three main components:
 1. **Customer UI (`app/customer.py`)**: A Streamlit frontend for shoppers.
 2. **Admin UI (`run_admin.py`)**: A Streamlit frontend for store managers.
 3. **Backend API (`backend/api.py`)**: A Flask REST API that bridges the UIs, database, and AI models.
 
-## 📦 Installation
+##  Installation
 
 1. **Clone the repository:**
    ```bash
@@ -43,7 +43,7 @@ The project is split into three main components:
    GROQ_API_KEY=your_api_key_here
    ```
 
-## 🚀 Running the Application
+##  Running the Application
 
 For the full experience, run the following components in separate terminal windows:
 
@@ -65,7 +65,7 @@ python run_admin.py
 # Admin runs on http://localhost:8501
 ```
 
-## 🧠 Model Setup & Configuration
+##  Model Setup & Configuration
 
 ### Whisper (Speech-to-Text)
 The app uses OpenAI Whisper (`base` model by default, ~150MB). It automatically downloads on the first voice query.
