@@ -4,12 +4,12 @@ A comprehensive, AI-powered smart shopping assistant designed to enhance the in-
 
 ##  Features
 
-- ** Voice & Text Chat**: Interact with the assistant using voice (powered by OpenAI Whisper) or text to find products naturally.
-- ** Local & Cloud AI**: Uses Ollama for local LLM processing (e.g., Phi-2, TinyLlama) or Groq for lightning-fast cloud inference.
-- ** Smart Store Routing**: Generates customized visual maps showing the optimal path from the entrance to your desired products.
-- ** Fuzzy Search**: Quickly find products even with typos using RapidFuzz.
-- ** Admin Dashboard**: A dedicated interface to manage store configuration, products, and aisles.
-- ** AMD Hardware Acceleration**: Supports ONNX Runtime with DirectML for accelerated inference on AMD GPUs (Olive optimization ready).
+- **Voice & Text Chat**: Interact with the assistant using voice (powered by OpenAI Whisper) or text to find products naturally.
+- **Local & Cloud AI**: Uses Ollama for local LLM processing (e.g., Phi-2, TinyLlama) or Groq for lightning-fast cloud inference.
+- **Smart Store Routing**: Generates customized visual maps showing the optimal path from the entrance to your desired products.
+- **Fuzzy Search**: Quickly find products even with typos using RapidFuzz.
+- **Admin Dashboard**: A dedicated interface to manage store configuration, products, and aisles.
+- **AMD Hardware Acceleration**: Supports ONNX Runtime with DirectML for accelerated inference on AMD GPUs (Olive optimization ready).
 
 ##  Architecture
 
