@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Shopping Assistant — Architecture Diagrams</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@1,700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #0a0a12;
+            color: #e0e0e0;
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 42px;
+            color: #b89d00;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        .subtitle {
+            text-align: center;
+            color: #6b7280;
+            font-size: 15px;
+            margin-bottom: 50px;
+        }
+        .section-title {
+            font-size: 22px;
+            font-weight: 600;
+            color: #b89d00;
+            text-align: center;
+            margin: 60px 0 30px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        /* ── PROCESS FLOW ── */
+        .flow-container {
+            max-width: 900px;
+            margin: 0 auto 60px;
+            position: relative;
+        }
+        .flow-row {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 8px;
+        }
+        .flow-node {
+            padding: 16px 28px;
+            border-radius: 14px;
+            font-size: 14px;
+            font-weight: 500;
+            text-align: center;
+            min-width: 200px;
+            position: relative;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .flow-node:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 30px rgba(184, 157, 0, 0.15);
+        }
+        .flow-node.user {
+            background: linear-gradient(135deg, #1a1a2e, #16213e);
+            border: 1.5px solid #b89d00;
+            color: #b89d00;
+            font-weight: 700;
+            font-size: 16px;
+        }
+        .flow-node.process {
+            background: linear-gradient(135deg, #111827, #1f2937);
+            border: 1.5px solid #374151;
+            color: #e5e7eb;
+        }
+        .flow-node.ai {
+            background: linear-gradient(135deg, #1a1a2e, #1e1b4b);
+            border: 1.5px solid #6366f1;
+            color: #a5b4fc;
+        }
+        .flow-node.amd {
+            background: linear-gradient(135deg, #1a0a0a, #2d1515);
+            border: 1.5px solid #ef4444;
+            color: #fca5a5;
+        }
+        .flow-node.output {
+            background: linear-gradient(135deg, #0a1a0a, #152d15);
+            border: 1.5px solid #22c55e;
+            color: #86efac;
+        }
+        .flow-arrow {
+            font-size: 22px;
+            color: #4b5563;
+            margin: 4px 0;
+            text-align: center;
+        }
+        .flow-arrow.horizontal {
+            margin: 0 12px;
+            font-size: 20px;
+        }
+        .flow-branch {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            align-items: flex-start;
+        }
+        .flow-branch-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+        }
+        .branch-label {
+            font-size: 11px;
+            color: #9ca3af;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .flow-icon { font-size: 20px; margin-right: 6px; }
+
+        /* ── USE CASE DIAGRAM ── */
+        .usecase-container {
+            max-width: 950px;
+            margin: 0 auto;
+            display: flex;
+            gap: 40px;
+            justify-content: center;
+            align-items: flex-start;
+        }
+        .actor-col {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+            min-width: 120px;
+            padding-top: 40px;
+        }
+        .actor-icon {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            border: 2px solid;
+        }
+        .actor-icon.customer { background: #1a1a2e; border-color: #b89d00; }
+        .actor-icon.admin { background: #1a0a2e; border-color: #a855f7; }
+        .actor-icon.system { background: #0a1a1a; border-color: #06b6d4; }
+        .actor-label {
+            font-size: 13px;
+            font-weight: 600;
+            color: #9ca3af;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .usecase-box {
+            flex: 1;
+            background: linear-gradient(135deg, #0d0d1a, #111827);
+            border: 1.5px solid #1f2937;
+            border-radius: 20px;
+            padding: 30px;
+            position: relative;
+        }
+        .usecase-box h3 {
+            text-align: center;
+            color: #6b7280;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 24px;
+        }
+        .usecase-list {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .usecase-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px 18px;
+            border-radius: 50px;
+            font-size: 13px;
+            font-weight: 500;
+            transition: transform 0.2s, background 0.2s;
+        }
+        .usecase-item:hover {
+            transform: translateX(5px);
+        }
+        .usecase-item.customer-action {
+            background: rgba(184, 157, 0, 0.08);
+            border: 1px solid rgba(184, 157, 0, 0.2);
+            color: #d4b800;
+        }
+        .usecase-item.admin-action {
+            background: rgba(168, 85, 247, 0.08);
+            border: 1px solid rgba(168, 85, 247, 0.2);
+            color: #c084fc;
+        }
+        .usecase-item.system-action {
+            background: rgba(6, 182, 212, 0.08);
+            border: 1px solid rgba(6, 182, 212, 0.2);
+            color: #67e8f9;
+        }
+        .uc-icon {
+            font-size: 18px;
+            width: 28px;
+            text-align: center;
+        }
+        .connector-lines {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 8px;
+            padding-top: 40px;
+        }
+        .conn-line {
+            width: 30px;
+            height: 1.5px;
+            background: #374151;
+        }
+
+        /* ── LEGEND ── */
+        .legend {
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+            margin-top: 40px;
+            flex-wrap: wrap;
+        }
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 12px;
+            color: #9ca3af;
+        }
+        .legend-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            border: 1.5px solid;
+        }
+
+        /* ── TECH ARCHITECTURE ── */
+        .arch-container {
+            max-width: 850px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+        }
+        .arch-card {
+            background: linear-gradient(135deg, #0d0d1a, #111827);
+            border: 1px solid #1f2937;
+            border-radius: 16px;
+            padding: 22px;
+            text-align: center;
+            transition: transform 0.2s, border-color 0.2s;
+        }
+        .arch-card:hover {
+            transform: translateY(-4px);
+            border-color: #b89d00;
+        }
+        .arch-card .arch-icon { font-size: 28px; margin-bottom: 10px; }
+        .arch-card h4 {
+            font-size: 14px;
+            font-weight: 600;
+            color: #e5e7eb;
+            margin-bottom: 6px;
+        }
+        .arch-card p {
+            font-size: 11px;
+            color: #6b7280;
+            line-height: 1.5;
+        }
+        .arch-card.highlight { border-color: #b89d00; }
+
+        .divider {
+            width: 80px;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #b89d00, transparent);
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Shopping Assistant</h1>
+    <p class="subtitle">AI-Powered In-Store Navigation System — Architecture & Diagrams</p>
+
+    <!-- ════════════════ PROCESS FLOW ════════════════ -->
+    <div class="section-title">Process Flow Diagram</div>
+    <div class="divider"></div>
+
+    <div class="flow-container">
+        <!-- Step 1: User Input -->
+        <div class="flow-row">
+            <div class="flow-node user"><span class="flow-icon">🧑</span> Customer Input</div>
+        </div>
+        <div class="flow-arrow">▼</div>
+
+        <!-- Step 2: Input Type Branch -->
+        <div class="flow-branch">
+            <div class="flow-branch-item">
+                <span class="branch-label">Text Query</span>
+                <div class="flow-node process"><span class="flow-icon">⌨️</span> Text Input</div>
+            </div>
+            <div class="flow-branch-item">
+                <span class="branch-label">Voice Query</span>
+                <div class="flow-node ai"><span class="flow-icon">🎤</span> Groq Whisper STT</div>
+            </div>
+        </div>
+        <div class="flow-arrow">▼</div>
+
+        <!-- Step 3: AI Search -->
+        <div class="flow-row">
+            <div class="flow-node ai"><span class="flow-icon">🧠</span> Groq Llama 3.1 8B — Smart Search</div>
+        </div>
+        <div class="flow-arrow">▼</div>
+
+        <!-- Step 4: Processing Branch -->
+        <div class="flow-branch">
+            <div class="flow-branch-item">
+                <div class="flow-node process"><span class="flow-icon">📦</span> Product Matching<br><small style="color:#6b7280">SQLite Database</small></div>
+            </div>
+            <div class="flow-branch-item">
+                <div class="flow-node process"><span class="flow-icon">🗺️</span> BFS Pathfinding<br><small style="color:#6b7280">Shortest Route</small></div>
+            </div>
+            <div class="flow-branch-item">
+                <div class="flow-node amd"><span class="flow-icon">⚡</span> AMD DirectML<br><small style="color:#6b7280">GPU Acceleration</small></div>
+            </div>
+        </div>
+        <div class="flow-arrow">▼</div>
+
+        <!-- Step 5: Response Generation -->
+        <div class="flow-row">
+            <div class="flow-node ai"><span class="flow-icon">💬</span> Ollama TinyLlama — Response Generation</div>
+        </div>
+        <div class="flow-arrow">▼</div>
+
+        <!-- Step 6: Output -->
+        <div class="flow-branch">
+            <div class="flow-branch-item">
+                <div class="flow-node output"><span class="flow-icon">🛍️</span> Product Cards</div>
+            </div>
+            <div class="flow-branch-item">
+                <div class="flow-node output"><span class="flow-icon">🚶</span> Directions</div>
+            </div>
+            <div class="flow-branch-item">
+                <div class="flow-node output"><span class="flow-icon">🗺️</span> Store Map</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Legend -->
+    <div class="legend">
+        <div class="legend-item"><div class="legend-dot" style="border-color:#b89d00; background:#1a1a2e"></div> User</div>
+        <div class="legend-item"><div class="legend-dot" style="border-color:#6366f1; background:#1e1b4b"></div> AI/ML</div>
+        <div class="legend-item"><div class="legend-dot" style="border-color:#ef4444; background:#2d1515"></div> AMD</div>
+        <div class="legend-item"><div class="legend-dot" style="border-color:#374151; background:#1f2937"></div> Processing</div>
+        <div class="legend-item"><div class="legend-dot" style="border-color:#22c55e; background:#152d15"></div> Output</div>
+    </div>
+
+    <!-- ════════════════ USE CASE DIAGRAM ════════════════ -->
+    <div class="section-title" style="margin-top:80px">Use Case Diagram</div>
+    <div class="divider"></div>
+
+    <div class="usecase-container" style="margin-top:30px">
+        <!-- Customer Actor -->
+        <div class="actor-col">
+            <div class="actor-icon customer">🧑</div>
+            <div class="actor-label">Customer</div>
+        </div>
+
+        <div class="connector-lines">
+            <div class="conn-line"></div><div class="conn-line"></div><div class="conn-line"></div>
+            <div class="conn-line"></div><div class="conn-line"></div><div class="conn-line"></div>
+        </div>
+
+        <!-- Use Cases -->
+        <div class="usecase-box">
+            <h3>AI Shopping Assistant System</h3>
+            <div class="usecase-list">
+                <div class="usecase-item customer-action"><span class="uc-icon">🔍</span> Search Products by Text</div>
+                <div class="usecase-item customer-action"><span class="uc-icon">🎤</span> Search Products by Voice</div>
+                <div class="usecase-item customer-action"><span class="uc-icon">🗺️</span> View Store Map & Directions</div>
+                <div class="usecase-item customer-action"><span class="uc-icon">💬</span> Chat with AI Assistant</div>
+                <div class="usecase-item customer-action"><span class="uc-icon">📦</span> View Product Details & Pricing</div>
+
+                <div style="border-top: 1px dashed #1f2937; margin: 8px 0;"></div>
+
+                <div class="usecase-item admin-action"><span class="uc-icon">➕</span> Add / Edit / Delete Products</div>
+                <div class="usecase-item admin-action"><span class="uc-icon">🏪</span> Configure Store Layout & Aisles</div>
+                <div class="usecase-item admin-action"><span class="uc-icon">⚙️</span> Manage Store Settings</div>
+
+                <div style="border-top: 1px dashed #1f2937; margin: 8px 0;"></div>
+
+                <div class="usecase-item system-action"><span class="uc-icon">🧠</span> AI-Powered Query Understanding</div>
+                <div class="usecase-item system-action"><span class="uc-icon">📍</span> BFS Shortest Path Calculation</div>
+                <div class="usecase-item system-action"><span class="uc-icon">⚡</span> AMD GPU Accelerated Inference</div>
+                <div class="usecase-item system-action"><span class="uc-icon">🔄</span> Offline Fallback (Local AI)</div>
+            </div>
+        </div>
+
+        <div class="connector-lines">
+            <div class="conn-line"></div><div class="conn-line"></div><div class="conn-line"></div>
+            <div class="conn-line"></div><div class="conn-line"></div><div class="conn-line"></div>
+        </div>
+
+        <!-- Admin Actor -->
+        <div class="actor-col">
+            <div class="actor-icon admin">👨‍💼</div>
+            <div class="actor-label">Admin</div>
+        </div>
+    </div>
+
+
+    <!-- ════════════════ TECH STACK ════════════════ -->
+    <div class="section-title" style="margin-top:80px">Technology Architecture</div>
+    <div class="divider"></div>
+
+    <div class="arch-container" style="margin-top:30px">
+        <div class="arch-card highlight">
+            <div class="arch-icon">🧠</div>
+            <h4>Groq Llama 3.1 8B</h4>
+            <p>Cloud LLM for intelligent natural language product search</p>
+        </div>
+        <div class="arch-card highlight">
+            <div class="arch-icon">🎤</div>
+            <h4>Groq Whisper</h4>
+            <p>Cloud speech-to-text transcription in ~1 second</p>
+        </div>
+        <div class="arch-card">
+            <div class="arch-icon">💬</div>
+            <h4>Ollama TinyLlama</h4>
+            <p>Local LLM for conversational AI responses</p>
+        </div>
+        <div class="arch-card" style="border-color: #ef4444;">
+            <div class="arch-icon">⚡</div>
+            <h4>ONNX Runtime DirectML</h4>
+            <p>AMD GPU-accelerated AI inference via DirectX 12</p>
+        </div>
+        <div class="arch-card" style="border-color: #ef4444;">
+            <div class="arch-icon">🔴</div>
+            <h4>PyTorch ROCm</h4>
+            <p>AMD Radeon GPU compute for Whisper model</p>
+        </div>
+        <div class="arch-card">
+            <div class="arch-icon">🔍</div>
+            <h4>RapidFuzz</h4>
+            <p>Fuzzy string matching for offline search fallback</p>
+        </div>
+        <div class="arch-card">
+            <div class="arch-icon">🗺️</div>
+            <h4>BFS Pathfinding</h4>
+            <p>Shortest path algorithm for in-store navigation</p>
+        </div>
+        <div class="arch-card">
+            <div class="arch-icon">🗄️</div>
+            <h4>SQLite + Flask</h4>
+            <p>Lightweight database & REST API backend</p>
+        </div>
+        <div class="arch-card">
+            <div class="arch-icon">🎨</div>
+            <h4>Streamlit</h4>
+            <p>Modern dark-themed customer & admin UI</p>
+        </div>
+    </div>
+
+    <div style="text-align:center; margin-top:60px; color:#374151; font-size:12px;">
+        AI-Powered Supermarket Shopping Assistant — Built with ❤️ and AMD
+    </div>
+
+</body>
+</html>

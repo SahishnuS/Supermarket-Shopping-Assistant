@@ -1,0 +1,1634 @@
+{
+    "aisles": [
+        {
+            "name": "A1",
+            "section": "Grocery & Staples",
+            "grid_x": 1,
+            "grid_y": 1
+        },
+        {
+            "name": "A2",
+            "section": "Grocery & Staples",
+            "grid_x": 1,
+            "grid_y": 2
+        },
+        {
+            "name": "A3",
+            "section": "Spices & Masala",
+            "grid_x": 1,
+            "grid_y": 3
+        },
+        {
+            "name": "B1",
+            "section": "Dairy & Frozen",
+            "grid_x": 2,
+            "grid_y": 1
+        },
+        {
+            "name": "B2",
+            "section": "Dairy & Frozen",
+            "grid_x": 2,
+            "grid_y": 2
+        },
+        {
+            "name": "C1",
+            "section": "Snacks & Namkeen",
+            "grid_x": 3,
+            "grid_y": 1
+        },
+        {
+            "name": "C2",
+            "section": "Beverages",
+            "grid_x": 3,
+            "grid_y": 2
+        },
+        {
+            "name": "C3",
+            "section": "Bakery & Biscuits",
+            "grid_x": 3,
+            "grid_y": 3
+        },
+        {
+            "name": "D1",
+            "section": "Personal Care",
+            "grid_x": 4,
+            "grid_y": 1
+        },
+        {
+            "name": "D2",
+            "section": "Personal Care",
+            "grid_x": 4,
+            "grid_y": 2
+        },
+        {
+            "name": "E1",
+            "section": "Medicine & Health",
+            "grid_x": 5,
+            "grid_y": 1
+        },
+        {
+            "name": "E2",
+            "section": "Fruits & Vegetables",
+            "grid_x": 5,
+            "grid_y": 2
+        }
+    ],
+    "products": [
+        {
+            "name": "Sugar",
+            "brand": "Tata",
+            "category": "Grocery",
+            "aisle": "A1",
+            "shelf": 1,
+            "keywords": "sweet,white sugar,shakkar,cheeni",
+            "variants": [
+                "1kg",
+                "5kg"
+            ],
+            "price": 45.0,
+            "quantity": "1kg"
+        },
+        {
+            "name": "Sugar",
+            "brand": "Reliance Select",
+            "category": "Grocery",
+            "aisle": "A1",
+            "shelf": 1,
+            "keywords": "sweet,white sugar,shakkar,cheeni",
+            "variants": [
+                "1kg",
+                "5kg"
+            ],
+            "price": 42.0,
+            "quantity": "1kg"
+        },
+        {
+            "name": "Sugar",
+            "brand": "Uttam",
+            "category": "Grocery",
+            "aisle": "A1",
+            "shelf": 1,
+            "keywords": "sweet,white sugar,shakkar,cheeni",
+            "variants": [
+                "1kg"
+            ],
+            "price": 40.0,
+            "quantity": "1kg"
+        },
+        {
+            "name": "Salt",
+            "brand": "Tata",
+            "category": "Grocery",
+            "aisle": "A1",
+            "shelf": 1,
+            "keywords": "namak,iodized salt,table salt",
+            "variants": [
+                "1kg"
+            ],
+            "price": 28.0,
+            "quantity": "1kg"
+        },
+        {
+            "name": "Salt",
+            "brand": "Catch",
+            "category": "Grocery",
+            "aisle": "A1",
+            "shelf": 1,
+            "keywords": "namak,iodized salt,table salt",
+            "variants": [
+                "1kg"
+            ],
+            "price": 25.0,
+            "quantity": "1kg"
+        },
+        {
+            "name": "Rock Salt",
+            "brand": "Patanjali",
+            "category": "Grocery",
+            "aisle": "A1",
+            "shelf": 1,
+            "keywords": "sendha namak,pink salt,himalayan salt",
+            "variants": [
+                "500g",
+                "1kg"
+            ],
+            "price": 55.0,
+            "quantity": "1kg"
+        },
+        {
+            "name": "Rice - Basmati",
+            "brand": "India Gate",
+            "category": "Grocery",
+            "aisle": "A1",
+            "shelf": 2,
+            "keywords": "basmati,chawal,biryani rice,pulao rice",
+            "variants": [
+                "1kg",
+                "5kg",
+                "10kg"
+            ],
+            "price": 180.0,
+            "quantity": "1kg"
+        },
+        {
+            "name": "Rice - Basmati",
+            "brand": "Daawat",
+            "category": "Grocery",
+            "aisle": "A1",
+            "shelf": 2,
+            "keywords": "basmati,chawal,biryani rice",
+            "variants": [
+                "1kg",
+                "5kg"
+            ],
+            "price": 165.0,
+            "quantity": "1kg"
+        },
+        {
+            "name": "Rice - Sona Masoori",
+            "brand": "24 Mantra",
+            "category": "Grocery",
+            "aisle": "A1",
+            "shelf": 2,
+            "keywords": "south indian rice,chawal,daily rice",
+            "variants": [
+                "5kg",
+                "10kg"
+            ],
+            "price": 85.0,
+            "quantity": "1kg"
+        },
+        {
+            "name": "Rice - Brown",
+            "brand": "Organic Tattva",
+            "category": "Grocery",
+            "aisle": "A1",
+            "shelf": 2,
+            "keywords": "brown rice,health rice,diet rice,organic",
+            "variants": [
+                "1kg"
+            ],
+            "price": 145.0,
+            "quantity": "1kg"
+        },
+        {
+            "name": "Wheat Flour (Atta)",
+            "brand": "Aashirvaad",
+            "category": "Grocery",
+            "aisle": "A1",
+            "shelf": 3,
+            "keywords": "atta,chapati flour,roti flour,gehun ka atta",
+            "variants": [
+                "1kg",
+                "5kg",
+                "10kg"
+            ],
+            "price": 65.0,
+            "quantity": "1kg"
+        },
+        {
+            "name": "Wheat Flour (Atta)",
+            "brand": "Pillsbury",
+            "category": "Grocery",
+            "aisle": "A1",
+            "shelf": 3,
+            "keywords": "atta,chapati flour,roti flour",
+            "variants": [
+                "1kg",
+                "5kg"
+            ],
+            "price": 60.0,
+            "quantity": "1kg"
+        },
+        {
+            "name": "Wheat Flour (Atta)",
+            "brand": "Patanjali",
+            "category": "Grocery",
+            "aisle": "A1",
+            "shelf": 3,
+            "keywords": "atta,chapati flour,roti flour,organic atta",
+            "variants": [
+                "5kg",
+                "10kg"
+            ],
+            "price": 55.0,
+            "quantity": "1kg"
+        },
+        {
+            "name": "Maida",
+            "brand": "Aashirvaad",
+            "category": "Grocery",
+            "aisle": "A1",
+            "shelf": 3,
+            "keywords": "all purpose flour,refined flour,bakery flour",
+            "variants": [
+                "500g",
+                "1kg"
+            ],
+            "price": 40.0,
+            "quantity": "1kg"
+        },
+        {
+            "name": "Besan",
+            "brand": "Rajdhani",
+            "category": "Grocery",
+            "aisle": "A1",
+            "shelf": 3,
+            "keywords": "gram flour,chickpea flour,pakoda flour",
+            "variants": [
+                "500g",
+                "1kg"
+            ],
+            "price": 75.0,
+            "quantity": "500g"
+        },
+        {
+            "name": "Cooking Oil - Sunflower",
+            "brand": "Fortune",
+            "category": "Grocery",
+            "aisle": "A2",
+            "shelf": 1,
+            "keywords": "sunflower oil,refined oil,tel",
+            "variants": [
+                "1L",
+                "5L"
+            ],
+            "price": 150.0,
+            "quantity": "1L"
+        },
+        {
+            "name": "Cooking Oil - Sunflower",
+            "brand": "Saffola",
+            "category": "Grocery",
+            "aisle": "A2",
+            "shelf": 1,
+            "keywords": "sunflower oil,heart healthy oil,refined oil",
+            "variants": [
+                "1L",
+                "5L"
+            ],
+            "price": 180.0,
+            "quantity": "1L"
+        },
+        {
+            "name": "Cooking Oil - Groundnut",
+            "brand": "Gemini",
+            "category": "Grocery",
+            "aisle": "A2",
+            "shelf": 1,
+            "keywords": "groundnut oil,peanut oil,moongphali tel",
+            "variants": [
+                "1L",
+                "5L"
+            ],
+            "price": 195.0,
+            "quantity": "1L"
+        },
+        {
+            "name": "Mustard Oil",
+            "brand": "Patanjali",
+            "category": "Grocery",
+            "aisle": "A2",
+            "shelf": 1,
+            "keywords": "sarson ka tel,mustard oil",
+            "variants": [
+                "1L",
+                "5L"
+            ],
+            "price": 165.0,
+            "quantity": "1L"
+        },
+        {
+            "name": "Mustard Oil",
+            "brand": "Fortune",
+            "category": "Grocery",
+            "aisle": "A2",
+            "shelf": 1,
+            "keywords": "sarson ka tel,mustard oil,kachi ghani",
+            "variants": [
+                "1L"
+            ],
+            "price": 175.0,
+            "quantity": "1L"
+        },
+        {
+            "name": "Olive Oil - Extra Virgin",
+            "brand": "Figaro",
+            "category": "Grocery",
+            "aisle": "A2",
+            "shelf": 1,
+            "keywords": "olive oil,salad oil,healthy oil,imported",
+            "variants": [
+                "250ml",
+                "500ml"
+            ],
+            "price": 350.0,
+            "quantity": "500ml"
+        },
+        {
+            "name": "Ghee",
+            "brand": "Amul",
+            "category": "Grocery",
+            "aisle": "A2",
+            "shelf": 2,
+            "keywords": "desi ghee,clarified butter,pure ghee",
+            "variants": [
+                "200ml",
+                "500ml",
+                "1L"
+            ],
+            "price": 290.0,
+            "quantity": "500ml"
+        },
+        {
+            "name": "Ghee",
+            "brand": "Patanjali",
+            "category": "Grocery",
+            "aisle": "A2",
+            "shelf": 2,
+            "keywords": "desi ghee,cow ghee,pure ghee",
+            "variants": [
+                "500ml",
+                "1L"
+            ],
+            "price": 260.0,
+            "quantity": "500ml"
+        },
+        {
+            "name": "Tea",
+            "brand": "Tata Gold",
+            "category": "Grocery",
+            "aisle": "A2",
+            "shelf": 3,
+            "keywords": "chai,tea leaves,chai patti",
+            "variants": [
+                "100g",
+                "250g",
+                "500g"
+            ],
+            "price": 125.0,
+            "quantity": "250g"
+        },
+        {
+            "name": "Tea",
+            "brand": "Red Label",
+            "category": "Grocery",
+            "aisle": "A2",
+            "shelf": 3,
+            "keywords": "chai,tea,brooke bond tea",
+            "variants": [
+                "100g",
+                "250g",
+                "500g"
+            ],
+            "price": 115.0,
+            "quantity": "250g"
+        },
+        {
+            "name": "Tea",
+            "brand": "Wagh Bakri",
+            "category": "Grocery",
+            "aisle": "A2",
+            "shelf": 3,
+            "keywords": "chai,tea,premium tea",
+            "variants": [
+                "250g",
+                "500g"
+            ],
+            "price": 140.0,
+            "quantity": "250g"
+        },
+        {
+            "name": "Coffee",
+            "brand": "Nescafe",
+            "category": "Grocery",
+            "aisle": "A2",
+            "shelf": 3,
+            "keywords": "instant coffee,coffee powder,kaapi",
+            "variants": [
+                "50g",
+                "100g",
+                "200g"
+            ],
+            "price": 210.0,
+            "quantity": "100g"
+        },
+        {
+            "name": "Coffee",
+            "brand": "Bru",
+            "category": "Grocery",
+            "aisle": "A2",
+            "shelf": 3,
+            "keywords": "instant coffee,coffee,filter coffee",
+            "variants": [
+                "50g",
+                "100g"
+            ],
+            "price": 180.0,
+            "quantity": "100g"
+        },
+        {
+            "name": "Green Tea",
+            "brand": "Tetley",
+            "category": "Grocery",
+            "aisle": "A2",
+            "shelf": 3,
+            "keywords": "green tea,herbal tea,health tea,diet tea",
+            "variants": [
+                "25 bags",
+                "50 bags"
+            ],
+            "price": 165.0,
+            "quantity": "25 bags"
+        },
+        {
+            "name": "Turmeric Powder",
+            "brand": "MDH",
+            "category": "Spices",
+            "aisle": "A3",
+            "shelf": 1,
+            "keywords": "haldi,spice,masala,yellow powder",
+            "variants": [
+                "100g",
+                "500g"
+            ],
+            "price": 55.0,
+            "quantity": "100g"
+        },
+        {
+            "name": "Red Chili Powder",
+            "brand": "MDH",
+            "category": "Spices",
+            "aisle": "A3",
+            "shelf": 1,
+            "keywords": "lal mirch,spice,masala,hot",
+            "variants": [
+                "100g",
+                "500g"
+            ],
+            "price": 60.0,
+            "quantity": "100g"
+        },
+        {
+            "name": "Red Chili Powder",
+            "brand": "Everest",
+            "category": "Spices",
+            "aisle": "A3",
+            "shelf": 1,
+            "keywords": "lal mirch,kashmiri mirch,deggi mirch",
+            "variants": [
+                "100g",
+                "200g"
+            ],
+            "price": 65.0,
+            "quantity": "100g"
+        },
+        {
+            "name": "Garam Masala",
+            "brand": "MDH",
+            "category": "Spices",
+            "aisle": "A3",
+            "shelf": 1,
+            "keywords": "spice mix,masala,curry powder",
+            "variants": [
+                "50g",
+                "100g"
+            ],
+            "price": 70.0,
+            "quantity": "50g"
+        },
+        {
+            "name": "Coriander Powder",
+            "brand": "MDH",
+            "category": "Spices",
+            "aisle": "A3",
+            "shelf": 1,
+            "keywords": "dhaniya powder,spice,masala",
+            "variants": [
+                "100g",
+                "500g"
+            ],
+            "price": 45.0,
+            "quantity": "100g"
+        },
+        {
+            "name": "Cumin Powder",
+            "brand": "Everest",
+            "category": "Spices",
+            "aisle": "A3",
+            "shelf": 2,
+            "keywords": "jeera powder,spice,cumin",
+            "variants": [
+                "50g",
+                "100g"
+            ],
+            "price": 50.0,
+            "quantity": "50g"
+        },
+        {
+            "name": "Kitchen King Masala",
+            "brand": "MDH",
+            "category": "Spices",
+            "aisle": "A3",
+            "shelf": 2,
+            "keywords": "multi-purpose masala,sabji masala",
+            "variants": [
+                "100g"
+            ],
+            "price": 75.0,
+            "quantity": "100g"
+        },
+        {
+            "name": "Biryani Masala",
+            "brand": "Shan",
+            "category": "Spices",
+            "aisle": "A3",
+            "shelf": 2,
+            "keywords": "biryani spice,rice masala,pulao masala",
+            "variants": [
+                "50g"
+            ],
+            "price": 60.0,
+            "quantity": "50g"
+        },
+        {
+            "name": "Milk - Full Cream",
+            "brand": "Amul",
+            "category": "Dairy",
+            "aisle": "B1",
+            "shelf": 1,
+            "keywords": "doodh,fresh milk,full cream milk",
+            "variants": [
+                "500ml",
+                "1L"
+            ],
+            "price": 32.0,
+            "quantity": "500ml"
+        },
+        {
+            "name": "Milk - Toned",
+            "brand": "Amul",
+            "category": "Dairy",
+            "aisle": "B1",
+            "shelf": 1,
+            "keywords": "toned milk,low fat milk,diet milk",
+            "variants": [
+                "500ml",
+                "1L"
+            ],
+            "price": 28.0,
+            "quantity": "500ml"
+        },
+        {
+            "name": "Milk - Full Cream",
+            "brand": "Mother Dairy",
+            "category": "Dairy",
+            "aisle": "B1",
+            "shelf": 1,
+            "keywords": "doodh,fresh milk,cow milk",
+            "variants": [
+                "500ml",
+                "1L"
+            ],
+            "price": 30.0,
+            "quantity": "500ml"
+        },
+        {
+            "name": "Curd",
+            "brand": "Amul",
+            "category": "Dairy",
+            "aisle": "B1",
+            "shelf": 1,
+            "keywords": "dahi,yogurt,plain curd",
+            "variants": [
+                "200g",
+                "500g"
+            ],
+            "price": 30.0,
+            "quantity": "200g"
+        },
+        {
+            "name": "Curd",
+            "brand": "Mother Dairy",
+            "category": "Dairy",
+            "aisle": "B1",
+            "shelf": 1,
+            "keywords": "dahi,yogurt,mishti doi",
+            "variants": [
+                "400g"
+            ],
+            "price": 35.0,
+            "quantity": "400g"
+        },
+        {
+            "name": "Butter",
+            "brand": "Amul",
+            "category": "Dairy",
+            "aisle": "B1",
+            "shelf": 2,
+            "keywords": "makhan,salted butter,bread spread",
+            "variants": [
+                "100g",
+                "500g"
+            ],
+            "price": 56.0,
+            "quantity": "100g"
+        },
+        {
+            "name": "Cheese Slice",
+            "brand": "Amul",
+            "category": "Dairy",
+            "aisle": "B1",
+            "shelf": 2,
+            "keywords": "cheese,processed cheese,sandwich cheese",
+            "variants": [
+                "5 slices",
+                "10 slices"
+            ],
+            "price": 95.0,
+            "quantity": "200g"
+        },
+        {
+            "name": "Cheese Slice",
+            "brand": "Britannia",
+            "category": "Dairy",
+            "aisle": "B1",
+            "shelf": 2,
+            "keywords": "cheese,processed cheese",
+            "variants": [
+                "5 slices"
+            ],
+            "price": 85.0,
+            "quantity": "100g"
+        },
+        {
+            "name": "Paneer",
+            "brand": "Amul",
+            "category": "Dairy",
+            "aisle": "B1",
+            "shelf": 2,
+            "keywords": "cottage cheese,tofu alternative,fresh paneer",
+            "variants": [
+                "200g",
+                "1kg"
+            ],
+            "price": 90.0,
+            "quantity": "200g"
+        },
+        {
+            "name": "Paneer",
+            "brand": "Mother Dairy",
+            "category": "Dairy",
+            "aisle": "B1",
+            "shelf": 2,
+            "keywords": "cottage cheese,paneer block,fresh paneer",
+            "variants": [
+                "200g"
+            ],
+            "price": 85.0,
+            "quantity": "200g"
+        },
+        {
+            "name": "Ice Cream - Vanilla",
+            "brand": "Amul",
+            "category": "Frozen",
+            "aisle": "B2",
+            "shelf": 1,
+            "keywords": "dessert,frozen treat,vanilla ice cream",
+            "variants": [
+                "500ml",
+                "1L"
+            ],
+            "price": 120.0,
+            "quantity": "500ml"
+        },
+        {
+            "name": "Ice Cream - Chocolate",
+            "brand": "Kwality Walls",
+            "category": "Frozen",
+            "aisle": "B2",
+            "shelf": 1,
+            "keywords": "chocolate ice cream,dessert,frozen treat",
+            "variants": [
+                "700ml"
+            ],
+            "price": 180.0,
+            "quantity": "700ml"
+        },
+        {
+            "name": "Frozen Peas",
+            "brand": "Safal",
+            "category": "Frozen",
+            "aisle": "B2",
+            "shelf": 2,
+            "keywords": "matar,green peas,frozen vegetables",
+            "variants": [
+                "500g",
+                "1kg"
+            ],
+            "price": 75.0,
+            "quantity": "500g"
+        },
+        {
+            "name": "Frozen Mixed Vegetables",
+            "brand": "Safal",
+            "category": "Frozen",
+            "aisle": "B2",
+            "shelf": 2,
+            "keywords": "frozen veggies,mixed vegetables,sabji",
+            "variants": [
+                "500g"
+            ],
+            "price": 95.0,
+            "quantity": "500g"
+        },
+        {
+            "name": "Potato Chips - Classic",
+            "brand": "Lays",
+            "category": "Snacks",
+            "aisle": "C1",
+            "shelf": 1,
+            "keywords": "crisps,chips,namkeen,snack,aloo chips",
+            "variants": [
+                "28g",
+                "52g",
+                "Party Pack"
+            ],
+            "price": 20.0,
+            "quantity": "52g"
+        },
+        {
+            "name": "Potato Chips - Magic Masala",
+            "brand": "Lays",
+            "category": "Snacks",
+            "aisle": "C1",
+            "shelf": 1,
+            "keywords": "masala chips,crisps,spicy chips",
+            "variants": [
+                "28g",
+                "52g"
+            ],
+            "price": 20.0,
+            "quantity": "52g"
+        },
+        {
+            "name": "Chips - Cream & Onion",
+            "brand": "Uncle Chipps",
+            "category": "Snacks",
+            "aisle": "C1",
+            "shelf": 1,
+            "keywords": "chips,crisps,cream onion chips",
+            "variants": [
+                "55g"
+            ],
+            "price": 20.0,
+            "quantity": "55g"
+        },
+        {
+            "name": "Kurkure",
+            "brand": "PepsiCo",
+            "category": "Snacks",
+            "aisle": "C1",
+            "shelf": 1,
+            "keywords": "masala munch,namkeen,corn snack,crispy",
+            "variants": [
+                "30g",
+                "75g",
+                "Party Pack"
+            ],
+            "price": 20.0,
+            "quantity": "75g"
+        },
+        {
+            "name": "Namkeen - Bhujia",
+            "brand": "Haldiram",
+            "category": "Snacks",
+            "aisle": "C1",
+            "shelf": 2,
+            "keywords": "bhujia,mixture,sev,savory snack",
+            "variants": [
+                "200g",
+                "400g",
+                "1kg"
+            ],
+            "price": 85.0,
+            "quantity": "200g"
+        },
+        {
+            "name": "Namkeen - Mixture",
+            "brand": "Haldiram",
+            "category": "Snacks",
+            "aisle": "C1",
+            "shelf": 2,
+            "keywords": "navratna mixture,sev,namkeen",
+            "variants": [
+                "150g",
+                "400g"
+            ],
+            "price": 70.0,
+            "quantity": "150g"
+        },
+        {
+            "name": "Namkeen - Aloo Bhujia",
+            "brand": "Bikaner",
+            "category": "Snacks",
+            "aisle": "C1",
+            "shelf": 2,
+            "keywords": "aloo bhujia,namkeen,crispy snack",
+            "variants": [
+                "200g"
+            ],
+            "price": 60.0,
+            "quantity": "200g"
+        },
+        {
+            "name": "Chocolate - Dairy Milk",
+            "brand": "Cadbury",
+            "category": "Snacks",
+            "aisle": "C1",
+            "shelf": 3,
+            "keywords": "dairy milk,chocolate bar,sweet,candy,mithai",
+            "variants": [
+                "13g",
+                "50g",
+                "Silk"
+            ],
+            "price": 40.0,
+            "quantity": "50g"
+        },
+        {
+            "name": "Chocolate - Silk",
+            "brand": "Cadbury",
+            "category": "Snacks",
+            "aisle": "C1",
+            "shelf": 3,
+            "keywords": "silk chocolate,premium chocolate,smooth chocolate",
+            "variants": [
+                "60g",
+                "150g"
+            ],
+            "price": 90.0,
+            "quantity": "60g"
+        },
+        {
+            "name": "Chocolate - KitKat",
+            "brand": "Nestle",
+            "category": "Snacks",
+            "aisle": "C1",
+            "shelf": 3,
+            "keywords": "wafer chocolate,kitkat,crispy chocolate",
+            "variants": [
+                "2 finger",
+                "4 finger"
+            ],
+            "price": 30.0,
+            "quantity": "37g"
+        },
+        {
+            "name": "Chocolate - 5 Star",
+            "brand": "Cadbury",
+            "category": "Snacks",
+            "aisle": "C1",
+            "shelf": 3,
+            "keywords": "caramel chocolate,nougat,5star",
+            "variants": [
+                "25g",
+                "45g"
+            ],
+            "price": 20.0,
+            "quantity": "25g"
+        },
+        {
+            "name": "Biscuits - Parle-G",
+            "brand": "Parle",
+            "category": "Bakery",
+            "aisle": "C3",
+            "shelf": 1,
+            "keywords": "glucose biscuit,chai snack,parle g",
+            "variants": [
+                "50g",
+                "250g",
+                "800g"
+            ],
+            "price": 10.0,
+            "quantity": "250g"
+        },
+        {
+            "name": "Biscuits - Marie Gold",
+            "brand": "Britannia",
+            "category": "Bakery",
+            "aisle": "C3",
+            "shelf": 1,
+            "keywords": "marie biscuit,light biscuit,tea biscuit",
+            "variants": [
+                "250g"
+            ],
+            "price": 35.0,
+            "quantity": "250g"
+        },
+        {
+            "name": "Biscuits - Good Day",
+            "brand": "Britannia",
+            "category": "Bakery",
+            "aisle": "C3",
+            "shelf": 1,
+            "keywords": "butter biscuit,cookies,cashew biscuit",
+            "variants": [
+                "75g",
+                "200g"
+            ],
+            "price": 30.0,
+            "quantity": "75g"
+        },
+        {
+            "name": "Biscuits - Dark Fantasy",
+            "brand": "Sunfeast",
+            "category": "Bakery",
+            "aisle": "C3",
+            "shelf": 1,
+            "keywords": "choco creme,premium biscuit,chocolate biscuit",
+            "variants": [
+                "75g",
+                "200g"
+            ],
+            "price": 40.0,
+            "quantity": "75g"
+        },
+        {
+            "name": "Bread - White",
+            "brand": "Britannia",
+            "category": "Bakery",
+            "aisle": "C3",
+            "shelf": 2,
+            "keywords": "sandwich bread,white bread,toast",
+            "variants": [
+                "400g"
+            ],
+            "price": 40.0,
+            "quantity": "400g"
+        },
+        {
+            "name": "Bread - Brown",
+            "brand": "Britannia",
+            "category": "Bakery",
+            "aisle": "C3",
+            "shelf": 2,
+            "keywords": "brown bread,whole wheat bread,healthy bread",
+            "variants": [
+                "400g"
+            ],
+            "price": 45.0,
+            "quantity": "400g"
+        },
+        {
+            "name": "Coca-Cola",
+            "brand": "Coca-Cola",
+            "category": "Beverages",
+            "aisle": "C2",
+            "shelf": 1,
+            "keywords": "cold drink,soda,soft drink,coke",
+            "variants": [
+                "250ml",
+                "500ml",
+                "1L",
+                "2L"
+            ],
+            "price": 40.0,
+            "quantity": "750ml"
+        },
+        {
+            "name": "Pepsi",
+            "brand": "PepsiCo",
+            "category": "Beverages",
+            "aisle": "C2",
+            "shelf": 1,
+            "keywords": "cold drink,soda,soft drink,pepsi cola",
+            "variants": [
+                "250ml",
+                "500ml",
+                "2L"
+            ],
+            "price": 40.0,
+            "quantity": "750ml"
+        },
+        {
+            "name": "Thumbs Up",
+            "brand": "Coca-Cola",
+            "category": "Beverages",
+            "aisle": "C2",
+            "shelf": 1,
+            "keywords": "cold drink,soda,strong cola,soft drink",
+            "variants": [
+                "250ml",
+                "750ml",
+                "2L"
+            ],
+            "price": 40.0,
+            "quantity": "750ml"
+        },
+        {
+            "name": "Sprite",
+            "brand": "Coca-Cola",
+            "category": "Beverages",
+            "aisle": "C2",
+            "shelf": 1,
+            "keywords": "lemon drink,clear soda,lime drink",
+            "variants": [
+                "250ml",
+                "750ml"
+            ],
+            "price": 40.0,
+            "quantity": "750ml"
+        },
+        {
+            "name": "Mango Juice",
+            "brand": "Maaza",
+            "category": "Beverages",
+            "aisle": "C2",
+            "shelf": 2,
+            "keywords": "fruit juice,aam ras,mango drink",
+            "variants": [
+                "200ml",
+                "600ml",
+                "1L"
+            ],
+            "price": 25.0,
+            "quantity": "200ml"
+        },
+        {
+            "name": "Mango Juice",
+            "brand": "Frooti",
+            "category": "Beverages",
+            "aisle": "C2",
+            "shelf": 2,
+            "keywords": "mango drink,fruit juice,aam ras",
+            "variants": [
+                "200ml",
+                "600ml",
+                "1.2L"
+            ],
+            "price": 20.0,
+            "quantity": "200ml"
+        },
+        {
+            "name": "Mixed Fruit Juice",
+            "brand": "Real",
+            "category": "Beverages",
+            "aisle": "C2",
+            "shelf": 2,
+            "keywords": "fruit juice,mixed fruit,healthy drink",
+            "variants": [
+                "200ml",
+                "1L"
+            ],
+            "price": 30.0,
+            "quantity": "200ml"
+        },
+        {
+            "name": "Water Bottle",
+            "brand": "Bisleri",
+            "category": "Beverages",
+            "aisle": "C2",
+            "shelf": 3,
+            "keywords": "mineral water,drinking water,paani",
+            "variants": [
+                "500ml",
+                "1L",
+                "2L"
+            ],
+            "price": 20.0,
+            "quantity": "1L"
+        },
+        {
+            "name": "Water Bottle",
+            "brand": "Kinley",
+            "category": "Beverages",
+            "aisle": "C2",
+            "shelf": 3,
+            "keywords": "mineral water,packaged water",
+            "variants": [
+                "500ml",
+                "1L"
+            ],
+            "price": 20.0,
+            "quantity": "1L"
+        },
+        {
+            "name": "Energy Drink",
+            "brand": "Red Bull",
+            "category": "Beverages",
+            "aisle": "C2",
+            "shelf": 3,
+            "keywords": "energy drink,sports drink,caffeine drink",
+            "variants": [
+                "250ml"
+            ],
+            "price": 125.0,
+            "quantity": "250ml"
+        },
+        {
+            "name": "Shampoo",
+            "brand": "Head & Shoulders",
+            "category": "Personal Care",
+            "aisle": "D1",
+            "shelf": 1,
+            "keywords": "hair wash,dandruff,hair care,anti dandruff",
+            "variants": [
+                "72ml",
+                "180ml",
+                "340ml",
+                "650ml"
+            ],
+            "price": 190.0,
+            "quantity": "340ml"
+        },
+        {
+            "name": "Shampoo",
+            "brand": "Dove",
+            "category": "Personal Care",
+            "aisle": "D1",
+            "shelf": 1,
+            "keywords": "hair wash,smooth hair,hair care,silky hair",
+            "variants": [
+                "80ml",
+                "180ml",
+                "340ml"
+            ],
+            "price": 210.0,
+            "quantity": "340ml"
+        },
+        {
+            "name": "Shampoo",
+            "brand": "Clinic Plus",
+            "category": "Personal Care",
+            "aisle": "D1",
+            "shelf": 1,
+            "keywords": "hair wash,long hair,strong hair",
+            "variants": [
+                "80ml",
+                "175ml",
+                "340ml"
+            ],
+            "price": 120.0,
+            "quantity": "175ml"
+        },
+        {
+            "name": "Soap - Bathing",
+            "brand": "Dove",
+            "category": "Personal Care",
+            "aisle": "D1",
+            "shelf": 2,
+            "keywords": "bathing soap,body wash,cream soap",
+            "variants": [
+                "75g",
+                "100g",
+                "4-pack"
+            ],
+            "price": 55.0,
+            "quantity": "100g"
+        },
+        {
+            "name": "Soap - Bathing",
+            "brand": "Lux",
+            "category": "Personal Care",
+            "aisle": "D1",
+            "shelf": 2,
+            "keywords": "bathing soap,fragrant soap,beauty soap",
+            "variants": [
+                "75g",
+                "150g"
+            ],
+            "price": 38.0,
+            "quantity": "75g"
+        },
+        {
+            "name": "Soap - Bathing",
+            "brand": "Dettol",
+            "category": "Personal Care",
+            "aisle": "D1",
+            "shelf": 2,
+            "keywords": "antiseptic soap,germ kill soap,protection soap",
+            "variants": [
+                "75g",
+                "125g"
+            ],
+            "price": 42.0,
+            "quantity": "75g"
+        },
+        {
+            "name": "Toothpaste",
+            "brand": "Colgate",
+            "category": "Personal Care",
+            "aisle": "D1",
+            "shelf": 3,
+            "keywords": "dental care,teeth cleaning,strong teeth,cavity protection",
+            "variants": [
+                "50g",
+                "100g",
+                "200g"
+            ],
+            "price": 80.0,
+            "quantity": "100g"
+        },
+        {
+            "name": "Toothpaste",
+            "brand": "Pepsodent",
+            "category": "Personal Care",
+            "aisle": "D1",
+            "shelf": 3,
+            "keywords": "dental care,germi check,teeth whitening",
+            "variants": [
+                "100g",
+                "200g"
+            ],
+            "price": 70.0,
+            "quantity": "100g"
+        },
+        {
+            "name": "Toothpaste",
+            "brand": "Sensodyne",
+            "category": "Personal Care",
+            "aisle": "D1",
+            "shelf": 3,
+            "keywords": "sensitive teeth,dental care,tooth sensitivity",
+            "variants": [
+                "40g",
+                "80g"
+            ],
+            "price": 110.0,
+            "quantity": "80g"
+        },
+        {
+            "name": "Face Wash",
+            "brand": "Garnier",
+            "category": "Personal Care",
+            "aisle": "D2",
+            "shelf": 1,
+            "keywords": "face cleanser,skin care,acne face wash",
+            "variants": [
+                "50ml",
+                "100ml",
+                "150ml"
+            ],
+            "price": 135.0,
+            "quantity": "100ml"
+        },
+        {
+            "name": "Face Wash",
+            "brand": "Nivea",
+            "category": "Personal Care",
+            "aisle": "D2",
+            "shelf": 1,
+            "keywords": "face cleanser,skin care,men face wash",
+            "variants": [
+                "50ml",
+                "100ml"
+            ],
+            "price": 145.0,
+            "quantity": "100ml"
+        },
+        {
+            "name": "Deodorant",
+            "brand": "Nivea",
+            "category": "Personal Care",
+            "aisle": "D2",
+            "shelf": 2,
+            "keywords": "body spray,perfume,fragrance,antiperspirant",
+            "variants": [
+                "150ml"
+            ],
+            "price": 210.0,
+            "quantity": "150ml"
+        },
+        {
+            "name": "Deodorant",
+            "brand": "Fogg",
+            "category": "Personal Care",
+            "aisle": "D2",
+            "shelf": 2,
+            "keywords": "body spray,perfume,no gas deo",
+            "variants": [
+                "120ml",
+                "150ml"
+            ],
+            "price": 180.0,
+            "quantity": "150ml"
+        },
+        {
+            "name": "Hair Oil",
+            "brand": "Parachute",
+            "category": "Personal Care",
+            "aisle": "D2",
+            "shelf": 3,
+            "keywords": "coconut oil,hair oil,nariyal tel",
+            "variants": [
+                "100ml",
+                "200ml",
+                "500ml"
+            ],
+            "price": 75.0,
+            "quantity": "200ml"
+        },
+        {
+            "name": "Hair Oil",
+            "brand": "Bajaj Almond",
+            "category": "Personal Care",
+            "aisle": "D2",
+            "shelf": 3,
+            "keywords": "almond oil,hair oil,non-sticky oil",
+            "variants": [
+                "100ml",
+                "200ml"
+            ],
+            "price": 90.0,
+            "quantity": "200ml"
+        },
+        {
+            "name": "Paracetamol",
+            "brand": "Crocin",
+            "category": "Medicine",
+            "aisle": "E1",
+            "shelf": 1,
+            "keywords": "fever,headache,pain relief,cold,flu,bukhar,body pain",
+            "variants": [
+                "10 tab",
+                "15 tab"
+            ],
+            "price": 30.0,
+            "quantity": "15 tablets"
+        },
+        {
+            "name": "Paracetamol",
+            "brand": "Dolo 650",
+            "category": "Medicine",
+            "aisle": "E1",
+            "shelf": 1,
+            "keywords": "fever,headache,pain relief,high fever,bukhar",
+            "variants": [
+                "15 tab"
+            ],
+            "price": 35.0,
+            "quantity": "15 tablets"
+        },
+        {
+            "name": "Cold & Flu Tablets",
+            "brand": "Vicks Action 500",
+            "category": "Medicine",
+            "aisle": "E1",
+            "shelf": 1,
+            "keywords": "cold relief,sardi,khansi,flu,cough,body pain",
+            "variants": [
+                "10 tab"
+            ],
+            "price": 25.0,
+            "quantity": "10 tablets"
+        },
+        {
+            "name": "Cough Syrup",
+            "brand": "Benadryl",
+            "category": "Medicine",
+            "aisle": "E1",
+            "shelf": 1,
+            "keywords": "cough,khansi,dry cough,throat irritation",
+            "variants": [
+                "100ml",
+                "150ml"
+            ],
+            "price": 95.0,
+            "quantity": "100ml"
+        },
+        {
+            "name": "Bandage",
+            "brand": "Dettol",
+            "category": "Medicine",
+            "aisle": "E1",
+            "shelf": 2,
+            "keywords": "first aid,wound,injury,patti,plaster",
+            "variants": [
+                "Small",
+                "Large"
+            ],
+            "price": 35.0,
+            "quantity": "10 pieces"
+        },
+        {
+            "name": "Hand Sanitizer",
+            "brand": "Dettol",
+            "category": "Medicine",
+            "aisle": "E1",
+            "shelf": 3,
+            "keywords": "germ protection,hand wash,hygiene,sanitizer",
+            "variants": [
+                "50ml",
+                "200ml"
+            ],
+            "price": 45.0,
+            "quantity": "200ml"
+        },
+        {
+            "name": "Hand Sanitizer",
+            "brand": "Lifebuoy",
+            "category": "Medicine",
+            "aisle": "E1",
+            "shelf": 3,
+            "keywords": "germ kill,hand sanitizer,hygiene",
+            "variants": [
+                "50ml",
+                "190ml"
+            ],
+            "price": 40.0,
+            "quantity": "190ml"
+        },
+        {
+            "name": "Digene",
+            "brand": "Abbott",
+            "category": "Medicine",
+            "aisle": "E1",
+            "shelf": 2,
+            "keywords": "acidity,gas,stomach,antacid,indigestion",
+            "variants": [
+                "15 tab",
+                "30 tab"
+            ],
+            "price": 55.0,
+            "quantity": "15 tablets"
+        },
+        {
+            "name": "Banana",
+            "brand": "",
+            "category": "Fruits & Vegetables",
+            "aisle": "E2",
+            "shelf": 1,
+            "keywords": "kela,fruit,yellow fruit",
+            "variants": [
+                "1 dozen"
+            ],
+            "price": 40.0,
+            "quantity": "1 dozen"
+        },
+        {
+            "name": "Apple - Shimla",
+            "brand": "",
+            "category": "Fruits & Vegetables",
+            "aisle": "E2",
+            "shelf": 1,
+            "keywords": "seb,fruit,red apple,shimla apple",
+            "variants": [
+                "500g",
+                "1kg"
+            ],
+            "price": 180.0,
+            "quantity": "1kg"
+        },
+        {
+            "name": "Orange",
+            "brand": "",
+            "category": "Fruits & Vegetables",
+            "aisle": "E2",
+            "shelf": 1,
+            "keywords": "santra,fruit,citrus,vitamin c",
+            "variants": [
+                "500g",
+                "1kg"
+            ],
+            "price": 80.0,
+            "quantity": "1kg"
+        },
+        {
+            "name": "Pomegranate",
+            "brand": "",
+            "category": "Fruits & Vegetables",
+            "aisle": "E2",
+            "shelf": 1,
+            "keywords": "anaar,fruit,red fruit,juice fruit",
+            "variants": [
+                "500g"
+            ],
+            "price": 120.0,
+            "quantity": "500g"
+        },
+        {
+            "name": "Tomato",
+            "brand": "",
+            "category": "Fruits & Vegetables",
+            "aisle": "E2",
+            "shelf": 2,
+            "keywords": "tamatar,vegetable,sabji,red vegetable",
+            "variants": [
+                "500g",
+                "1kg"
+            ],
+            "price": 30.0,
+            "quantity": "1kg"
+        },
+        {
+            "name": "Onion",
+            "brand": "",
+            "category": "Fruits & Vegetables",
+            "aisle": "E2",
+            "shelf": 2,
+            "keywords": "pyaaz,vegetable,sabji",
+            "variants": [
+                "500g",
+                "1kg"
+            ],
+            "price": 35.0,
+            "quantity": "1kg"
+        },
+        {
+            "name": "Potato",
+            "brand": "",
+            "category": "Fruits & Vegetables",
+            "aisle": "E2",
+            "shelf": 2,
+            "keywords": "aloo,vegetable,sabji",
+            "variants": [
+                "500g",
+                "1kg",
+                "2kg"
+            ],
+            "price": 25.0,
+            "quantity": "1kg"
+        },
+        {
+            "name": "Carrot",
+            "brand": "",
+            "category": "Fruits & Vegetables",
+            "aisle": "E2",
+            "shelf": 2,
+            "keywords": "gajar,vegetable,root vegetable,salad",
+            "variants": [
+                "250g",
+                "500g"
+            ],
+            "price": 40.0,
+            "quantity": "500g"
+        },
+        {
+            "name": "Capsicum",
+            "brand": "",
+            "category": "Fruits & Vegetables",
+            "aisle": "E2",
+            "shelf": 2,
+            "keywords": "shimla mirch,bell pepper,green pepper",
+            "variants": [
+                "250g"
+            ],
+            "price": 60.0,
+            "quantity": "250g"
+        },
+        {
+            "name": "Lemon",
+            "brand": "",
+            "category": "Fruits & Vegetables",
+            "aisle": "E2",
+            "shelf": 2,
+            "keywords": "nimbu,lemon,lime,citrus",
+            "variants": [
+                "250g"
+            ],
+            "price": 30.0,
+            "quantity": "250g"
+        }
+    ]
+}

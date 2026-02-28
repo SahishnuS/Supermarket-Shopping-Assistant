@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Architecture Diagram — AI Shopping Assistant</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@1,700&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #0a0a12;
+            color: #e0e0e0;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            padding: 50px 20px;
+        }
+
+        .container {
+            max-width: 700px;
+            width: 100%;
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 38px;
+            color: #b89d00;
+            text-align: center;
+            margin-bottom: 6px;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #6b7280;
+            font-size: 14px;
+            margin-bottom: 50px;
+        }
+
+        .layer {
+            position: relative;
+            margin-bottom: 20px;
+        }
+
+        .layer-card {
+            background: linear-gradient(135deg, #0d0d1a, #111827);
+            border: 1.5px solid #1f2937;
+            border-radius: 16px;
+            padding: 24px 28px;
+            transition: transform 0.25s, border-color 0.25s, box-shadow 0.25s;
+        }
+
+        .layer-card:hover {
+            transform: translateY(-3px);
+            border-color: #b89d00;
+            box-shadow: 0 8px 30px rgba(184, 157, 0, 0.08);
+        }
+
+        .layer-num {
+            display: inline-block;
+            width: 28px;
+            height: 28px;
+            line-height: 28px;
+            text-align: center;
+            border-radius: 50%;
+            font-size: 13px;
+            font-weight: 700;
+            margin-right: 12px;
+            flex-shrink: 0;
+        }
+
+        .layer-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 8px;
+        }
+
+        .layer-title {
+            font-size: 18px;
+            font-weight: 600;
+            color: #f3f4f6;
+        }
+
+        .layer-icon {
+            font-size: 20px;
+            margin-right: 8px;
+        }
+
+        .layer-desc {
+            font-size: 13px;
+            color: #9ca3af;
+            line-height: 1.6;
+            padding-left: 40px;
+        }
+
+        .layer-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            padding-left: 40px;
+            margin-top: 10px;
+        }
+
+        .tag {
+            font-size: 11px;
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-weight: 500;
+        }
+
+        /* Color themes per layer */
+        .layer-frontend .layer-num {
+            background: #b89d00;
+            color: #0a0a12;
+        }
+
+        .layer-frontend .layer-card {
+            border-color: rgba(184, 157, 0, 0.3);
+        }
+
+        .layer-frontend .tag {
+            background: rgba(184, 157, 0, 0.12);
+            color: #d4b800;
+            border: 1px solid rgba(184, 157, 0, 0.2);
+        }
+
+        .layer-api .layer-num {
+            background: #6366f1;
+            color: #fff;
+        }
+
+        .layer-api .layer-card {
+            border-color: rgba(99, 102, 241, 0.3);
+        }
+
+        .layer-api .tag {
+            background: rgba(99, 102, 241, 0.12);
+            color: #a5b4fc;
+            border: 1px solid rgba(99, 102, 241, 0.2);
+        }
+
+        .layer-ai .layer-num {
+            background: #8b5cf6;
+            color: #fff;
+        }
+
+        .layer-ai .layer-card {
+            border-color: rgba(139, 92, 246, 0.3);
+        }
+
+        .layer-ai .tag {
+            background: rgba(139, 92, 246, 0.12);
+            color: #c4b5fd;
+            border: 1px solid rgba(139, 92, 246, 0.2);
+        }
+
+        .layer-search .layer-num {
+            background: #22c55e;
+            color: #0a0a12;
+        }
+
+        .layer-search .layer-card {
+            border-color: rgba(34, 197, 94, 0.3);
+        }
+
+        .layer-search .tag {
+            background: rgba(34, 197, 94, 0.12);
+            color: #86efac;
+            border: 1px solid rgba(34, 197, 94, 0.2);
+        }
+
+        .layer-nav .layer-num {
+            background: #06b6d4;
+            color: #0a0a12;
+        }
+
+        .layer-nav .layer-card {
+            border-color: rgba(6, 182, 212, 0.3);
+        }
+
+        .layer-nav .tag {
+            background: rgba(6, 182, 212, 0.12);
+            color: #67e8f9;
+            border: 1px solid rgba(6, 182, 212, 0.2);
+        }
+
+        .layer-amd .layer-num {
+            background: #ef4444;
+            color: #fff;
+        }
+
+        .layer-amd .layer-card {
+            border-color: rgba(239, 68, 68, 0.3);
+        }
+
+        .layer-amd .tag {
+            background: rgba(239, 68, 68, 0.12);
+            color: #fca5a5;
+            border: 1px solid rgba(239, 68, 68, 0.2);
+        }
+
+        .layer-data .layer-num {
+            background: #f59e0b;
+            color: #0a0a12;
+        }
+
+        .layer-data .layer-card {
+            border-color: rgba(245, 158, 11, 0.3);
+        }
+
+        .layer-data .tag {
+            background: rgba(245, 158, 11, 0.12);
+            color: #fcd34d;
+            border: 1px solid rgba(245, 158, 11, 0.2);
+        }
+
+        /* Arrow between layers */
+        .arrow {
+            text-align: center;
+            color: #374151;
+            font-size: 18px;
+            margin: 6px 0;
+            letter-spacing: 4px;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            color: #374151;
+            font-size: 11px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Architecture Diagram</h1>
+        <p class="subtitle">AI-Powered Supermarket Shopping Assistant</p>
+
+        <!-- Layer 1 -->
+        <div class="layer layer-frontend">
+            <div class="layer-card">
+                <div class="layer-header">
+                    <span class="layer-num">1</span>
+                    <span class="layer-icon">🎨</span>
+                    <span class="layer-title">Frontend Layer</span>
+                </div>
+                <div class="layer-desc">Streamlit-based customer chat interface and admin dashboard with dark-themed UI.
+                </div>
+                <div class="layer-tags">
+                    <span class="tag">Streamlit</span>
+                    <span class="tag">Customer UI</span>
+                    <span class="tag">Admin Dashboard</span>
+                </div>
+            </div>
+        </div>
+        <div class="arrow">▼</div>
+
+        <!-- Layer 2 -->
+        <div class="layer layer-api">
+            <div class="layer-card">
+                <div class="layer-header">
+                    <span class="layer-num">2</span>
+                    <span class="layer-icon">🔌</span>
+                    <span class="layer-title">API Layer</span>
+                </div>
+                <div class="layer-desc">Flask REST API handles communication between the frontend and backend services.
+                </div>
+                <div class="layer-tags">
+                    <span class="tag">Flask</span>
+                    <span class="tag">REST API</span>
+                    <span class="tag">Flask-CORS</span>
+                </div>
+            </div>
+        </div>
+        <div class="arrow">▼</div>
+
+        <!-- Layer 3 -->
+        <div class="layer layer-ai">
+            <div class="layer-card">
+                <div class="layer-header">
+                    <span class="layer-num">3</span>
+                    <span class="layer-icon">🧠</span>
+                    <span class="layer-title">AI / ML Layer</span>
+                </div>
+                <div class="layer-desc">Groq Llama 3.1 8B for smart search, Groq Whisper for STT, and Ollama TinyLlama
+                    for chat responses.</div>
+                <div class="layer-tags">
+                    <span class="tag">Groq Llama 3.1 8B</span>
+                    <span class="tag">Groq Whisper</span>
+                    <span class="tag">Ollama TinyLlama</span>
+                </div>
+            </div>
+        </div>
+        <div class="arrow">▼</div>
+
+        <!-- Layer 4 -->
+        <div class="layer layer-search">
+            <div class="layer-card">
+                <div class="layer-header">
+                    <span class="layer-num">4</span>
+                    <span class="layer-icon">🔍</span>
+                    <span class="layer-title">Search Engine</span>
+                </div>
+                <div class="layer-desc">Groq LLM-powered semantic search with RapidFuzz fuzzy matching and
+                    PySpellChecker as offline fallback.</div>
+                <div class="layer-tags">
+                    <span class="tag">Groq LLM Search</span>
+                    <span class="tag">RapidFuzz</span>
+                    <span class="tag">PySpellChecker</span>
+                </div>
+            </div>
+        </div>
+        <div class="arrow">▼</div>
+
+        <!-- Layer 5 -->
+        <div class="layer layer-nav">
+            <div class="layer-card">
+                <div class="layer-header">
+                    <span class="layer-num">5</span>
+                    <span class="layer-icon">🗺️</span>
+                    <span class="layer-title">Navigation Engine</span>
+                </div>
+                <div class="layer-desc">BFS pathfinding algorithm computes shortest walking route and generates
+                    step-by-step directions with visual store map.</div>
+                <div class="layer-tags">
+                    <span class="tag">BFS Algorithm</span>
+                    <span class="tag">Matplotlib Map</span>
+                    <span class="tag">Grid Navigation</span>
+                </div>
+            </div>
+        </div>
+        <div class="arrow">▼</div>
+
+        <!-- Layer 6 -->
+        <div class="layer layer-amd">
+            <div class="layer-card">
+                <div class="layer-header">
+                    <span class="layer-num">6</span>
+                    <span class="layer-icon">⚡</span>
+                    <span class="layer-title">AMD Acceleration Layer</span>
+                </div>
+                <div class="layer-desc">ONNX Runtime DirectML and PyTorch ROCm enable GPU-accelerated AI inference on
+                    AMD Radeon hardware.</div>
+                <div class="layer-tags">
+                    <span class="tag">ONNX DirectML</span>
+                    <span class="tag">PyTorch ROCm</span>
+                    <span class="tag">AMD Radeon GPU</span>
+                </div>
+            </div>
+        </div>
+        <div class="arrow">▼</div>
+
+        <!-- Layer 7 -->
+        <div class="layer layer-data">
+            <div class="layer-card">
+                <div class="layer-header">
+                    <span class="layer-num">7</span>
+                    <span class="layer-icon">🗄️</span>
+                    <span class="layer-title">Data Layer</span>
+                </div>
+                <div class="layer-desc">SQLite database stores products, aisles, shelf locations, store configuration,
+                    and admin settings.</div>
+                <div class="layer-tags">
+                    <span class="tag">SQLite</span>
+                    <span class="tag">Products DB</span>
+                    <span class="tag">Store Config</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">AI-Powered Supermarket Shopping Assistant — Built with ❤️ and AMD</div>
+    </div>
+</body>
+
+</html>

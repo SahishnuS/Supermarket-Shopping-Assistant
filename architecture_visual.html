@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Architecture Diagram</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(170deg, #d3ffd3 0%, #f0f7f0 30%, #ffffff 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 40px;
+        }
+
+        .main-container {
+            max-width: 1100px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* ── Header Area ── */
+        .title-box {
+            background-color: #4338ca;
+            /* matching the dark blue header */
+            color: white;
+            padding: 15px 40px;
+            border-radius: 40px;
+            font-size: 38px;
+            font-weight: 600;
+            margin-bottom: 15px;
+            display: inline-block;
+        }
+
+        .subtitle {
+            color: #4338ca;
+            font-size: 18px;
+            font-weight: 500;
+            margin-bottom: 50px;
+        }
+
+        /* ── Diagram Grid ── */
+        .diagram-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 40px;
+            width: 100%;
+            position: relative;
+        }
+
+        /* ── Columns ── */
+        .column {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* ── Elements ── */
+        .header-pill {
+            background-color: #4f46e5;
+            color: white;
+            width: 100%;
+            aspect-ratio: 2/1;
+            border-radius: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            font-weight: 500;
+            font-size: 17px;
+            line-height: 1.3;
+            margin-bottom: 40px;
+            padding: 20px;
+            min-height: 120px;
+        }
+
+        .box {
+            background-color: #38bdf8;
+            color: #0f172a;
+            width: 100%;
+            aspect-ratio: 2/1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 1.3;
+            margin-bottom: 30px;
+            padding: 15px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+
+        .box-subtext {
+            font-size: 11px;
+            font-weight: 400;
+            margin-top: 6px;
+            color: #1e293b;
+        }
+
+        /* ── SVG Arrows ── */
+        .svg-lines {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        line,
+        path {
+            stroke: #1e293b;
+            stroke-width: 2px;
+            fill: none;
+        }
+
+        .dashed {
+            stroke-dasharray: 6 4;
+        }
+
+        /* Arrow markers */
+        /* Note: SVG arrowheads are defined in <defs> */
+
+        /* ── Customizing column-specific alignments for arrows ── */
+        /* To keep the arrows robust across screen sizes, we'll draw them relative to percentages. */
+    </style>
+</head>
+
+<body>
+
+    <div class="main-container">
+
+        <!-- Title -->
+        <div class="title-box">Architecture Diagram</div>
+        <div class="subtitle">AI Shopping Assistant System Architecture</div>
+
+        <!-- Diagram -->
+        <div class="diagram-grid">
+
+            <!-- SVG connector lines -->
+            <svg class="svg-lines" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <marker id="arrow-end" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+                        <path d="M0,0 L0,6 L9,3 z" fill="#1e293b" />
+                    </marker>
+                    <marker id="arrow-start" markerWidth="10" markerHeight="10" refX="0" refY="3" orient="auto">
+                        <path d="M9,0 L9,6 L0,3 z" fill="#1e293b" />
+                    </marker>
+                </defs>
+
+                <!-- Frontend to Backend Headers (dashed, bidirectional) -->
+                <line x1="25%" y1="12%" x2="33%" y2="12%" class="dashed" marker-end="url(#arrow-end)"
+                    marker-start="url(#arrow-start)" />
+
+                <!-- Vertical lines (Column 1) -->
+                <line x1="12.5%" y1="20%" x2="12.5%" y2="40%" />
+                <line x1="12.5%" y1="60%" x2="12.5%" y2="70%" />
+
+                <!-- Vertical lines (Column 2) -->
+                <line x1="37.5%" y1="20%" x2="37.5%" y2="40%" />
+                <line x1="37.5%" y1="60%" x2="37.5%" y2="70%" />
+
+                <!-- Vertical lines (Column 3) -->
+                <line x1="62.5%" y1="20%" x2="62.5%" y2="40%" />
+                <line x1="62.5%" y1="60%" x2="62.5%" y2="70%" />
+
+                <!-- Vertical lines (Column 4) -->
+                <line x1="87.5%" y1="20%" x2="87.5%" y2="40%" />
+                <line x1="87.5%" y1="60%" x2="87.5%" y2="70%" />
+
+                <!-- Row 1 horizontal arrow (Col 1 to 2) -->
+                <line x1="25%" y1="50%" x2="33%" y2="50%" marker-end="url(#arrow-end)" />
+                <!-- Row 1 horizontal arrow (Col 2 to 3) -->
+                <line x1="50%" y1="50%" x2="58%" y2="50%" marker-end="url(#arrow-end)" />
+
+                <!-- Row 2 horizontal arrow (Col 3 to 2) -->
+                <line x1="50%" y1="80%" x2="42%" y2="80%" marker-start="url(#arrow-end)" />
+
+                <!-- Bottom dashed arrow (Col 1 to Col 4) -->
+                <path d="M 12.5% 90% L 12.5% 95% L 87.5% 95% L 87.5% 92%" class="dashed" marker-end="url(#arrow-end)"
+                    marker-start="url(#arrow-start)" />
+
+            </svg>
+
+            <!-- Column 1 -->
+            <div class="column">
+                <div class="header-pill">Frontend<br>Services</div>
+                <div class="box">
+                    Customer Chat UI
+                    <div class="box-subtext">Streamlit | Voice/Text</div>
+                </div>
+                <div class="box">
+                    Admin Dashboard
+                    <div class="box-subtext">Store Config | Adding Products</div>
+                </div>
+            </div>
+
+            <!-- Column 2 -->
+            <div class="column">
+                <div class="header-pill">Backend<br>Services</div>
+                <div class="box">
+                    Query & Search Pipeline
+                    <div class="box-subtext">Flask API | Groq NLP</div>
+                </div>
+                <div class="box">
+                    Nav & Chat Engine
+                    <div class="box-subtext">BFS Pathfinding | TinyLlama</div>
+                </div>
+            </div>
+
+            <!-- Column 3 -->
+            <div class="column">
+                <div class="header-pill">Data<br>Layer</div>
+                <div class="box">
+                    Products DB
+                    <div class="box-subtext">SQLite | Inventory</div>
+                </div>
+                <div class="box">
+                    Store Layout DB
+                    <div class="box-subtext">Aisles | Nav Nodes</div>
+                </div>
+            </div>
+
+            <!-- Column 4 -->
+            <div class="column">
+                <div class="header-pill">Integrations /<br>Third-Party Services</div>
+                <div class="box">
+                    Groq Cloud Inference
+                    <div class="box-subtext">Llama 3.1 & Whisper STT</div>
+                </div>
+                <div class="box">
+                    AMD Acceleration
+                    <div class="box-subtext">DirectML | PyTorch ROCm</div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
